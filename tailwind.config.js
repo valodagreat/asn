@@ -17,6 +17,7 @@ module.exports = {
         // => @media (max-width: 600px) { ... }
 
         phone: { 'max': '768px' },
+        phoneTab: { 'min': '768px', "max": "1280px" },
         // => @media (max-width: 350px) { ... }
       },
     },
