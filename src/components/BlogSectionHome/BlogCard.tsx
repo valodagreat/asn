@@ -9,7 +9,7 @@ const BlogCard = ({data}:{data: any}) => {
         <Link href={`/blog/${data?.id}`} >
             <div className='relative md:w-[411px] md:h-[580px] phone:w-[150px] phone:h-[210px] xl:mt-[100px] mt-[12px] md:mt-[42px] rounded-[8px] md:rounded-[24px]' >
             <Image priority={true} src={data?.image} height={331} width={464} alt="blog-card" className="absolute rounded-[8px] md:rounded-[24px] md:w-[411px] md:h-[580px] phone:w-[150px] phone:h-[210px] object-cover" />
-            <div className='flex flex-col rounded-[8px] md:rounded-[24px] z-10 absolute md:w-[411px] md:h-[580px] phone:w-[150px] phone:h-[210px] md:px-7 py-9 px-3' >
+            <div className='flex flex-col rounded-[8px] md:rounded-[24px] z-10 absolute md:w-[411px] md:h-[580px] phone:w-[150px] phone:h-[210px] md:px-7 md:py-9 py-5 px-3' >
                 <div className='flex justify-end' >
                     <div className='bg-[#881920] md:p-2 p-1 flex rounded' >
                         <p className='text-[#FFFFFF] font-bold md:text-[16px] md:leading-[21.79px] text-[5.8px] leading-[7.9px]' >{data?.category}</p>
