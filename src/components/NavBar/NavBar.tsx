@@ -6,6 +6,9 @@ import Link from "next/link";
 const NavBar = () => {
     const navTabs = [ "Home", "About", "Blog" ]
     const [ openNav, setOpenNav ] = useState(false)
+    const handleClick = () => {
+        window.open('https://chat.whatsapp.com/HYCmYQr45EB4QM080Rrr6t', '_blank');
+    };
   return (
     <>
         <nav className='flex justify-between items-center w-full' >
@@ -25,7 +28,7 @@ const NavBar = () => {
                     }
                     )}
                 </ul>
-                <button className='md:text-[20px] w-[177px] rounded-[1000px] bg-[#CC2630] h-[56px] text-white hidden xl:flex items-center justify-center' >
+                <button onClick={handleClick} className='md:text-[20px] w-[177px] rounded-[1000px] bg-[#CC2630] h-[56px] text-white hidden xl:flex items-center justify-center' >
                     Get Involved
                 </button>
             </div>

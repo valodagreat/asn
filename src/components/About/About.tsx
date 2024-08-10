@@ -6,12 +6,14 @@ import Footer from '../Footer/Footer'
 // import Impact from '../Impact/Impact'
 import BlogSectionHome from '../BlogSectionHome/BlogSectionHome'
 import YouTubeSectionHome from '../YouTubeSectionHome/YouTubeSectionHome'
+import Button from '../Button/Button'
 
 const About = () => {
   const valuePropositions = [{ text: "We offer access to cutting edge career exposition and transition opportunities. These includes Career Exposition, Career Transition, Mentorship, Learning Platform.", header: "Career Development", imageDir: "./../Frame 60.svg" }, { text: "We offer access to platform and network that help budding startups grow and build. These includes; Entrepreneurial Mindset , Startup Network, Funding, Incubators x Hackathons.", header: "Entrepreneurship", imageDir: "./../Frame 60 (1).svg" }, { text: "We offer you the opportunity to enhance and harness the power of true leadership. These include; Leadership, Leadership Expo, Mentorship, Training, Social Impact.", header: "Leadership", imageDir: "./../Frame 60 (2).svg" }]
+
   return (
     <div id="about" >
-        <div className=' relative flex flex-row-reverse' >
+        <div className=' relative flex flex-row-reverse bg-who-we-are phone:min-h-[250px]' >
             <div className="absolute w-1/2 h-full overflow-hidden">
                 <Image
                     src="./../OBJECTS.svg"
@@ -24,10 +26,10 @@ const About = () => {
             </div>
             <div className='w-full h-full relative z-10 xl:px-[120px] md:px-20 xl:py-[138px] md:py-24 py-9 px-7' >
                 <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`} >Who we are</h1>
-                <p className='text-[#161616] xl:text-[36px] xl:leading-[64px] md:text-[24px] text-[9px] md:leading-[43.691px] font-normal' >We are equipping African students for global relevance central to <span className='font-bold' >career development</span>, <span className='font-bold' >entrepreneurship</span> and <span className='font-bold' >leadership</span> by building a viable network of change makers across diverse universities in Africa.</p>
+                <p className='text-[#161616] xl:text-[28px] xl:leading-[64px] md:text-[24px] text-[12px] md:leading-[43.691px] font-normal leading-[28px]' >We are equipping African students for global relevance central to <span className='font-bold' >career development</span>, <span className='font-bold' >entrepreneurship</span> and <span className='font-bold' >leadership</span> by building a viable network of change makers across diverse universities in Africa.</p>
             </div>
         </div>
-        <div className='bg-[#FFF6F6] xl:pt-[150px] md:pt-[60px] pt-9' >
+        <div className='bg-[#FFFFFF] xl:pt-[150px] md:pt-[60px] pt-9 md:pb-[120px] pb-[60px]' >
             <h1 className={`text-[#CC2630] font-medium xl:text-[56px] md:text-[42px] text-[16px] ${manual.className} md:px-[80px] px-7 xl:px-[120px] md:pb-[48px] xl:pb-10 pb-6`} >Our Value Proposition</h1>
             <div className='relative w-full' >
                 <Image
@@ -40,11 +42,151 @@ const About = () => {
                     // objectPosition="center center"
                     priority={true}
                     width={1041}
-                    height={1120}
+                    height={772}
                     alt="Your alt text"
-                    className="absolute z-[0] overflow-hidden max-w-[60%] left-[15%] md:top-[25%] top-[28%]"
+                    className="absolute z-[0] overflow-hidden max-w-[45%] right-[10%] phone:hidden phoneTab:hidden"
                 />
-                <div className='md:flex flex-col relative hidden' >
+                <div className='relative flex xl:flex-row flex-col items-center xl:px-[120px] xl:gap-x-[63px]' >
+                    <div className='md:h-[600px] md:w-[600px] h-[200px] w-[200px] rounded-full bg-[#CC263012] relative' >
+                        <Image
+                            src="./../Frame 120.svg"
+                            alt="Your alt text"
+                            priority={true}
+                            width={350}
+                            height={350}
+                            className='md:w-[350px] md:h-[350px] h-[120px] w-[120px] absolute left-[20.833333%] top-[20.833333%]'
+                        />
+                        <div className='absolute top-[55%] md:top-0 left-[50%] bg-white w-[150px] md:w-[250px] h-[24px] md:h-[52px] rounded-[90px] z-[5] content-shadow py-2 px-6 flex items-center gap-x-2' >
+                            <Image
+                                src="./../career-path 1.svg"
+                                alt="Your alt text"
+                                priority={true}
+                                width={36}
+                                height={36}
+                                className='md:w-[36px] md:h-[36px] w-[16px] h-[16px]'
+                            />
+                            <p className='md:text-[16px] md:leading-[32px] text-[8px] leading-[12px]' >Career Development</p>
+                        </div>
+                        <div className='absolute top-0 md:top-[40%] left-[25%] md:left-[-12%] bg-white w-[150px] md:w-[250px] h-[24px] md:h-[52px] rounded-[90px] z-[5] content-shadow py-2 px-6 flex items-center gap-x-4' >
+                            <Image
+                                src="./../entrepreneur 1.svg"
+                                alt="Your alt text"
+                                priority={true}
+                                width={36}
+                                height={36}
+                                className='md:w-[36px] md:h-[36px] w-[16px] h-[16px]'
+                            />
+                            <p className='md:text-[16px] md:leading-[32px] text-[8px] leading-[12px]' >Entrepreneurship</p>
+                        </div>
+                        <div className='absolute bottom-0 md:bottom-[10%] md:left-0 left-[-20%] bg-white w-[150px] md:w-[250px] h-[24px] md:h-[52px] rounded-[90px] z-[5] content-shadow py-2 px-6 flex items-center gap-x-4' >
+                            <Image
+                                src="./../leadership 1.svg"
+                                alt="Your alt text"
+                                priority={true}
+                                width={36}
+                                height={36}
+                                className='md:w-[36px] md:h-[36px] w-[16px] h-[16px]'
+                            />
+                            <p className='md:text-[16px] md:leading-[32px] text-[8px] leading-[12px]' >Leadership</p>
+                        </div>
+                    </div>
+                    <div className='xl:w-[570px] hidden phone:flex xl:flex flex-col gap-y-9 phone:pt-[72px] phone:px-7' >
+                        <div>
+                            <div className='flex items-center gap-x-4' >
+                                <Image
+                                    src="./../career-path 1.svg"
+                                    alt="Your alt text"
+                                    priority={true}
+                                    width={56}
+                                    height={56}
+                                    className='md:w-[56px] md:h-[56px] w-[24px] h-[24px]'
+                                />
+                                <h2 className='font-bold text-[12px] phone:leading-[24px] md:text-2xl pb-2' >Career Development</h2>
+                            </div>
+                            <p className='font-normal md:leading-[40px] md:text-[20px] text-[10px] leading-[24px] text-[#777777]' >We offer access to cutting edge career exposition and transition opportunities. These includes Career Exposition, Career Transition, Mentorship, Learning Platform.</p>
+                        </div>
+                        <div>
+                            <div className='flex items-center gap-x-4' >
+                                <Image
+                                    src="./../leadership 1.svg"
+                                    alt="Your alt text"
+                                    priority={true}
+                                    width={56}
+                                    height={56}
+                                    className='md:w-[56px] md:h-[56px] w-[24px] h-[24px]'
+                                />
+                                <h2 className='font-bold text-[12px] phone:leading-[24px] md:text-2xl pb-2' >Leadership</h2>
+                            </div>
+                            <p className='font-normal md:leading-[40px] md:text-[20px] text-[10px] leading-[24px] text-[#777777]' >We offer you the opportunity to enhance and harness the power of true leadership. These include; Leadership, Leadership Expo, Mentorship, Training, Social Impact.</p>
+                        </div>
+                        <div>
+                            <div className='flex items-center gap-x-4' >
+                                <Image
+                                    src="./../entrepreneur 1.svg"
+                                    alt="Your alt text"
+                                    priority={true}
+                                    width={56}
+                                    height={56}
+                                    className='md:w-[56px] md:h-[56px] w-[24px] h-[24px]'
+                                />
+                                <h2 className='font-bold text-[12px] phone:leading-[24px] md:text-2xl pb-2' >Enterpreneurship</h2>
+                            </div>
+                            <p className='font-normal md:leading-[40px] md:text-[20px] text-[10px] leading-[24px] text-[#777777]' >We offer access to platform and network that help budding startups grow and build. These includes; Entrepreneurial Mindset , Startup Network, Funding, Incubators x Hackathons.</p>
+                        </div>
+                        <div className='phone:flex justify-center' >
+                            <Button/>
+                        </div>
+                    </div>
+                    <div className='hidden md:block xl:hidden px-20 pt-[60px]' >
+                        <div className='flex gap-x-10' >
+                            <div>
+                                <div className='flex items-center gap-x-4' >
+                                    <Image
+                                        src="./../career-path 1.svg"
+                                        alt="Your alt text"
+                                        priority={true}
+                                        width={56}
+                                        height={56}
+                                        className='w-[56px] h-[56px]'
+                                    />
+                                    <h2 className='font-bold text-2xl pb-2' >Career Development</h2>
+                                </div>
+                                <p className='font-normal leading-[40px] text-[20px] text-[#777777]' >We offer access to cutting edge career exposition and transition opportunities. These includes Career Exposition, Career Transition, Mentorship, Learning Platform.</p>
+                            </div>
+                            <div>
+                                <div className='flex items-center gap-x-4' >
+                                    <Image
+                                        src="./../leadership 1.svg"
+                                        alt="Your alt text"
+                                        priority={true}
+                                        width={56}
+                                        height={56}
+                                        className='w-[56px] h-[56px]'
+                                    />
+                                    <h2 className='font-bold text-2xl pb-2' >Leadership</h2>
+                                </div>
+                                <p className='font-normal leading-[40px] text-[20px] text-[#777777]' >We offer you the opportunity to enhance and harness the power of true leadership. These include; Leadership, Leadership Expo, Mentorship, Training, Social Impact.</p>
+                            </div>
+                        </div>
+                        <div className='pt-[60px] flex justify-center' > 
+                            <div className='max-w-[402px]' >
+                                <div className='flex items-center gap-x-4' >
+                                    <Image
+                                        src="./../entrepreneur 1.svg"
+                                        alt="Your alt text"
+                                        priority={true}
+                                        width={56}
+                                        height={56}
+                                        className='w-[56px] h-[56px]'
+                                    />
+                                    <h2 className='font-bold text-2xl pb-2' >Enterpreneurship</h2>
+                                </div>
+                                <p className='font-normal leading-[40px] text-[20px] text-[#777777]' >We offer access to platform and network that help budding startups grow and build. These includes; Entrepreneurial Mindset , Startup Network, Funding, Incubators x Hackathons.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* <div className='md:flex flex-col relative hidden' >
                     {valuePropositions?.map((valueProposition, index)=> {
                         return (
                             <div key={index} className='flex flex-row w-full items-center' >
@@ -83,6 +225,160 @@ const About = () => {
                             <p className='text-[9px] leading-[16px]' >We offer you the opportunity to enhance and harness the power of true leadership. These include; Leadership, Leadership Expo, Mentorship, Training, Social Impact.</p>
                         </div>
                     </div>
+                </div> */}
+            </div>
+
+        </div>
+        <div className=' relative' >
+            <div className="absolute w-full h-full phone:hidden">
+                <Image
+                    src="./../Rectangle.svg"
+                    fill={true}
+                    style={{ objectFit: "cover" }}
+                    objectPosition="center"
+                    alt="Your alt text"
+                    className="absolute"
+                />
+            </div>
+            <div className="absolute w-full h-full md:hidden">
+                <Image
+                    src="./../Rectangle.svg"
+                    fill={true}
+                    style={{ objectFit: "contain" }}
+                    objectPosition="center"
+                    alt="Your alt text"
+                    className="absolute"
+                />
+            </div>
+            <div className='w-full h-full relative z-10 xl:px-[120px] md:px-20 xl:py-[138px] md:py-24 py-9 px-7' >
+                <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`} >Our Programs</h1>
+                <div className='py-6' >
+                    <div className='flex md:gap-x-[50px] xl:gap-x-[60px] md:gap-y-[60px] gap-y-[36px] flex-wrap gap-x-5' >
+                        <div className='md:w-[400px] md:h-[300px] w-[150px] h-[240px]' >
+                            <Image
+                                src="./../up-arrow 1.svg"
+                                alt="Your alt text"
+                                priority={true}
+                                width={36}
+                                height={36}
+                                className='md:w-[36px] md:h-[36px] w-[24px] h-[24px]'
+                            />
+                            <h1 className='font-bold md:text-[20px] text-[12px] md:leading-[64px] leading-[24px]' >African Students’ Accelerator Program</h1>
+                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
+                        </div>
+                        <div className='md:w-[400px] md:h-[300px] w-[150px] h-[240px]' >
+                            <Image
+                                src="./../impact 1.svg"
+                                alt="Your alt text"
+                                priority={true}
+                                width={36}
+                                height={36}
+                                className='md:w-[36px] md:h-[36px] w-[24px] h-[24px]'
+                            />
+                            <h1 className='font-bold md:text-[20px] text-[12px] md:leading-[64px] leading-[24px]' >African Social Impact Program</h1>
+                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
+                        </div>
+                        <div className='md:w-[400px] md:h-[300px] w-[150px] h-[240px]' >
+                            <Image
+                                src="./../start-up 1.svg"
+                                alt="Your alt text"
+                                priority={true}
+                                width={36}
+                                height={36}
+                                className='md:w-[36px] md:h-[36px] w-[24px] h-[24px]'
+                            />
+                            <h1 className='font-bold md:text-[20px] text-[12px] md:leading-[64px] leading-[24px]' >African Startup Foundry</h1>
+                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
+                        </div>
+                        <div className='md:w-[400px] md:h-[300px] w-[150px] h-[240px]' >
+                            <Image
+                                src="./../insights 1.svg"
+                                alt="Your alt text"
+                                priority={true}
+                                width={36}
+                                height={36}
+                                className='md:w-[36px] md:h-[36px] w-[24px] h-[24px]'
+                            />
+                            <h1 className='font-bold md:text-[20px] text-[12px] md:leading-[64px] leading-[24px]' >Monthly Industry Insight Series</h1>
+                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
+                        </div>
+                        <div className='md:w-[400px] md:h-[300px] w-[150px] h-[240px]' >
+                            <Image
+                                src="./../speech-bubbles 1.svg"
+                                alt="Your alt text"
+                                priority={true}
+                                width={36}
+                                height={36}
+                                className='md:w-[36px] md:h-[36px] w-[24px] h-[24px]'
+                            />
+                            <h1 className='font-bold md:text-[20px] text-[12px] md:leading-[64px] leading-[24px]' >Monthly Webinar - Speaker Series</h1>
+                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
+                        </div>
+                        <div className='phone:flex justify-center phone:h-[240px] items-center' >
+                            <Button/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className='our-reach relative xl:px-[120px] md:px-20 xl:py-[138px] md:py-24 py-9 px-7' >
+            <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`} >Our Reach so Far</h1>
+            <div className='flex flex-wrap gap-x-[70px] md:gap-x-[120px] gap-y-9 py-6' >
+                <div className='flex flex-col items-center gap-y-1' >
+                    <div className='bg-[#CC263015] h-[108px] w-[108px] md:h-[128px] md:w-[128px] rounded-full flex items-center justify-center' >
+                        <Image
+                            src="./../student-hat 1.svg"
+                            alt="Your alt text"
+                            priority={true}
+                            width={80}
+                            height={80}
+                            className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
+                        />
+                    </div>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >1500+</p>
+                    <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Students reached</p>
+                </div>
+                <div className='flex flex-col items-center gap-y-1' >
+                    <div className='bg-[#CC263015] h-[108px] w-[108px] md:h-[128px] md:w-[128px] rounded-full flex items-center justify-center' >
+                        <Image
+                            src="./../africa 1.svg"
+                            alt="Your alt text"
+                            priority={true}
+                            width={80}
+                            height={80}
+                            className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
+                        />
+                    </div>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >10+</p>
+                    <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' > African countries</p>
+                </div>
+                <div className='flex flex-col items-center gap-y-1' >
+                    <div className='bg-[#CC263015] h-[108px] w-[108px] md:h-[128px] md:w-[128px] rounded-full flex items-center justify-center' >
+                        <Image
+                            src="./../localization 1.svg"
+                            alt="Your alt text"
+                            priority={true}
+                            width={80}
+                            height={80}
+                            className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
+                        />
+                    </div>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >8+</p>
+                    <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Global Speakers</p>
+                </div>
+                <div className='flex flex-col items-center gap-y-1' >
+                    <div className='bg-[#CC263015] h-[108px] w-[108px] md:h-[128px] md:w-[128px] rounded-full flex items-center justify-center' >
+                        <Image
+                            src="./../university-building 1.svg"
+                            alt="Your alt text"
+                            priority={true}
+                            width={80}
+                            height={80}
+                            className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
+                        />
+                    </div>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >20+</p>
+                    <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Universities </p>
                 </div>
             </div>
         </div>

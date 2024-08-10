@@ -32,7 +32,7 @@ const Home = () => {
         onSubmit: async (values: ArticleInterface) => {
           setLoading(true);
         //   console.log(user?.uid, user)
-          const { result, error } = await createArticle({...values, id: user?.uid});
+          const { result, error } = await createArticle({...values, id: user?.uid, dateAdded: new Date()});
             // if(result) router.push(`/home`)
             if(error) {
               if(typeof error === "string") {

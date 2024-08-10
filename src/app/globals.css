@@ -25,3 +25,15 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+.bg-who-we-are {
+  background: linear-gradient(180deg, #FFFDF3 58.47%, rgba(255, 253, 243, 0) 100%) !important;
+}
+
+.content-shadow {
+  box-shadow: 0px 4px 8px 0px #CC263014;
+}
+
+.our-reach {
+  background: linear-gradient(180deg, rgba(255, 253, 243, 0.85) 0%, rgba(255, 253, 243, 0) 0%, #FFFDF3 77.17%);
+}
