@@ -17,7 +17,7 @@ const BlogCard = ({data}:{data: any}) => {
                 </div>
                 <div className='absolute md:bottom-10 bottom-2' >
                     <p className='text-[#FFFFFF] font-bold md:pb-4 pb-2 text-[9px] leading-[12px] md:text-[24px] md:leading-[32.68px]' >{data?.title}</p>
-                    <p className='text-[#FFFFFF] font-bold md:text-[16px] md:leading-[22px] text-[6px] leading-[8px]' >{dayjs(data?.dateAdded).format("MMMM dd, YYYY")}</p>
+                    <p className='text-[#FFFFFF] font-bold md:text-[16px] md:leading-[22px] text-[6px] leading-[8px]' >{dayjs(data?.dateAdded).format("MMMM ddd, YYYY")}</p>
                 </div>
             </div>
             {/* <Image src="./../Frame 13.svg" height={112} width={150} alt="blog-card rounded-t-[16px] xl:max-w-[464px] xl:max-h-[331px] xl:hidden " /> */}
