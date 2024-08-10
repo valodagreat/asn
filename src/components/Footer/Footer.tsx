@@ -61,9 +61,9 @@ const Footer = () => {
     <div className='border-t border-[#661318] py-[55px] flex items-center justify-center' >
         <div>
             <div className='flex xl:gap-x-4 md:gap-x-[9.48px] phone:gap-x-2 justify-center pb-4' >
-                <a href={`https://twitter.com/AsnAfricahq`} target='_blank' ><span><Image src={`./../TwitterVector.svg`} alt="Bgimage" width={32} height={32} priority className='xl:w-[32px] xl:h-[32px] md:w-[16px] md:h-[16px] phone:h-[8px] phone:w-[8px]' /></span></a>
-                <a href={`https://www.instagram.com/asnafricahq/`} target='_blank' ><span><Image src={`./../InstagramUnion.svg`} alt="Bgimage" width={32} height={32} priority className='xl:w-[32px] xl:h-[32px] md:w-[16px] md:h-[16px] phone:h-[8px] phone:w-[8px]' /></span></a>
-                <a href={`https://www.linkedin.com/company/african-students-network/`} target='_blank' ><span><Image src={`./../LinkedInVector.svg`} alt="Bgimage" width={32} height={32} priority className='xl:w-[32px] xl:h-[32px] md:w-[16px] md:h-[16px] phone:h-[8px] phone:w-[8px]' /></span></a>
+                <a href={`https://twitter.com/AsnAfricahq`} target='_blank' ><span><Image src={`./../TwitterVector.svg`} alt="Bgimage" width={32} height={32} priority className='xl:w-[32px] xl:h-[32px] w-[16px] h-[16px]' /></span></a>
+                <a href={`https://www.instagram.com/asnafricahq/`} target='_blank' ><span><Image src={`./../InstagramUnion.svg`} alt="Bgimage" width={32} height={32} priority className='xl:w-[32px] xl:h-[32px] w-[16px] h-[16px]' /></span></a>
+                <a href={`https://www.linkedin.com/company/african-students-network/`} target='_blank' ><span><Image src={`./../LinkedInVector.svg`} alt="Bgimage" width={32} height={32} priority className='xl:w-[32px] xl:h-[32px] w-[16px] h-[16px]' /></span></a>
             </div>
             <p className='text-center font-light text-[#000000] md:text-[20px] md:leading-[30px]' >Copyright @ African Student Network {new Date().getFullYear()}</p>
         </div>
