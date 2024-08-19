@@ -254,7 +254,7 @@ const About = () => {
                 <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`} >Our Programs</h1>
                 <div className='py-6' >
                     <div className='flex md:gap-x-[50px] xl:gap-x-[60px] md:gap-y-[60px] gap-y-[36px] flex-wrap gap-x-5' >
-                        <div className='md:w-[400px] md:h-[300px] w-[150px] h-[240px]' >
+                        <div className='md:w-[400px] md:max-h-[600px] w-[150px]' >
                             <Image
                                 src="./../up-arrow 1.svg"
                                 alt="Your alt text"
@@ -264,9 +264,9 @@ const About = () => {
                                 className='md:w-[36px] md:h-[36px] w-[24px] h-[24px]'
                             />
                             <h1 className='font-bold md:text-[20px] text-[12px] md:leading-[64px] leading-[24px]' >African Students’ Accelerator Program</h1>
-                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
+                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >African Students’ Accelerator Program is designed to equip African students for global relevance and impact central to career development, entrepreneurship and leadership in any frontier of the continent and the world at large. The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
                         </div>
-                        <div className='md:w-[400px] md:h-[300px] w-[150px] h-[240px]' >
+                        <div className='md:w-[400px] md:max-h-[600px] w-[150px]' >
                             <Image
                                 src="./../impact 1.svg"
                                 alt="Your alt text"
@@ -276,9 +276,9 @@ const About = () => {
                                 className='md:w-[36px] md:h-[36px] w-[24px] h-[24px]'
                             />
                             <h1 className='font-bold md:text-[20px] text-[12px] md:leading-[64px] leading-[24px]' >African Social Impact Program</h1>
-                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
+                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The African Social Impact Program (ASIP) is a transformative initiative designed to empower individuals with the knowledge, skills, and experiences needed to drive positive change in communities across Africa. Grounded in the belief that sustainable impact is achieved through collaborative, innovative solutions, ASIP brings together a diverse group of passionate individuals eager to make a difference.</p>
                         </div>
-                        <div className='md:w-[400px] md:h-[300px] w-[150px] h-[240px]' >
+                        <div className='md:w-[400px] md:max-h-[600px] w-[150px]' >
                             <Image
                                 src="./../start-up 1.svg"
                                 alt="Your alt text"
@@ -288,9 +288,9 @@ const About = () => {
                                 className='md:w-[36px] md:h-[36px] w-[24px] h-[24px]'
                             />
                             <h1 className='font-bold md:text-[20px] text-[12px] md:leading-[64px] leading-[24px]' >African Startup Foundry</h1>
-                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
+                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The African Startup Foundry is a program that supports and nurtures startups in Africa, providing resources, mentorship, funding, and a supportive ecosystem to help new businesses thrive. The goal is to assist startups in their early stages.</p>
                         </div>
-                        <div className='md:w-[400px] md:h-[300px] w-[150px] h-[240px]' >
+                        <div className='md:w-[400px] md:max-h-[600px] w-[150px]' >
                             <Image
                                 src="./../insights 1.svg"
                                 alt="Your alt text"
@@ -300,9 +300,9 @@ const About = () => {
                                 className='md:w-[36px] md:h-[36px] w-[24px] h-[24px]'
                             />
                             <h1 className='font-bold md:text-[20px] text-[12px] md:leading-[64px] leading-[24px]' >Monthly Industry Insight Series</h1>
-                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
+                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The Monthly Industry Insight Series is a monthly webinar to better equip African students with career and leadership skills, ensuring their readiness for the job market, cutting across different industries from technology to finance to health, and many more.</p>
                         </div>
-                        <div className='md:w-[400px] md:h-[300px] w-[150px] h-[240px]' >
+                        <div className='md:w-[400px] md:max-h-[600px] w-[150px]' >
                             <Image
                                 src="./../speech-bubbles 1.svg"
                                 alt="Your alt text"
@@ -312,7 +312,7 @@ const About = () => {
                                 className='md:w-[36px] md:h-[36px] w-[24px] h-[24px]'
                             />
                             <h1 className='font-bold md:text-[20px] text-[12px] md:leading-[64px] leading-[24px]' >Monthly Webinar - Speaker Series</h1>
-                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The program seeks to build a viable network of change makers among African students across diverse universities, who are hungry for growth and development to aid their trajectory into their respective sphere of influence and for sustainable local and global impact.</p>
+                            <p className='text-[#777777] md:text-[16px] text-[8px] md:leading-[32px] leading-[20px] ' >The Monthly Webinar Series is held once a month, where we have well seasoned speakers to cover a variety of subjects and provide valuable information, updates, or insights to African students.</p>
                         </div>
                         <div className='phone:flex justify-center phone:h-[240px] items-center' >
                             <Button/>
