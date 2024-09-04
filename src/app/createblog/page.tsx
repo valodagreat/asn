@@ -27,6 +27,7 @@ const Home = () => {
           category: "",
           body: "",
           image: "",
+          author: "",
         },
         validationSchema: ArticleValidations,
         onSubmit: async (values: ArticleInterface) => {
@@ -96,6 +97,13 @@ const Home = () => {
             </div> : <div className='h-full flex justify-center items-center w-full overflow-y-auto' >
                 <div className='w-full max-w-[850px] md:px-10 px-5 overflow-y-auto h-full py-10' >
                     <p className='font-medium xl:text-[32px] text-[24px]' >Create Article</p>
+                    <div className='w-full py-4' >
+                        <p>Author</p>
+                        <input onChange={handleChange} name="author" value={values.author} className='outline-none py-4 px-6 rounded-[15px] mt-2 h-[52px] border w-full border-[#000]' />
+                        {errors.author && touched.author && (
+                            <p className="text-[14px] text-red-500 pt-1">{errors.author}</p>
+                        )}
+                    </div>
                     <div className='w-full py-4' >
                         <p>Title</p>
                         <input onChange={handleChange} name="title" value={values.title} className='outline-none py-4 px-6 rounded-[15px] mt-2 h-[52px] border w-full border-[#000]' />

@@ -23,7 +23,7 @@ const NavBar = () => {
                                 <li className='font-semibold text-[16px] md:text-[20px] lg:text-[27px] text-[#EEB7BA] ' key={tab} >{tab}</li>
                             </Link>
                         }else {
-                            return <a href={`#${tab?.toLowerCase()}`} key={tab} ><li className='font-semibold text-[16px] md:text-[20px] lg:text-[27px] text-[#EEB7BA] ' >{tab}</li></a>
+                            return <a href={`/#${tab?.toLowerCase()}`} key={tab} ><li className='font-semibold text-[16px] md:text-[20px] lg:text-[27px] text-[#EEB7BA] ' >{tab}</li></a>
                         }
                     }
                     )}
@@ -47,7 +47,7 @@ const NavBar = () => {
                     if(tab==="Blog"){
                         return <Link onClick={()=> setOpenNav(false)} key={tab} href={`/${tab?.toLowerCase()}`}><li className='font-semibold text-[16px] md:text-[20px] lg:text-[27px] text-[#EEB7BA] ' key={tab} >{tab}</li></Link>
                     }else {
-                        return <a onClick={()=> setOpenNav(false)} href={`#${tab?.toLowerCase()}`} key={tab} ><li className='font-semibold text-[16px] md:text-[20px] lg:text-[27px] text-[#EEB7BA] ' key={tab} >{tab}</li></a>
+                        return <a onClick={()=> setOpenNav(false)} href={`/#${tab?.toLowerCase()}`} key={tab} ><li className='font-semibold text-[16px] md:text-[20px] lg:text-[27px] text-[#EEB7BA] ' key={tab} >{tab}</li></a>
                     }
                 })}
             </ul>

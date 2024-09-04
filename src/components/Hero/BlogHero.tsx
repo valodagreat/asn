@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import NavBar from '../NavBar/NavBar'
 import BlogHerobody from '../Herobody/BlogHerobody'
+import NavBar from '../NavBar/NavBar'
 
 const BlogHero = () => {
   return (

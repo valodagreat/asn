@@ -26,5 +26,6 @@ export const ArticleValidations = () => {
     ),
     category: Yup.string().required('Category is required'),
     title: Yup.string().required('Title is required'),
+    author: Yup.string().required('Author full name is required'),
   });
 }

@@ -9,4 +9,5 @@ export interface ArticleInterface {
     category: string;
     body: string;
     image: any;
+    author: string;
 }
