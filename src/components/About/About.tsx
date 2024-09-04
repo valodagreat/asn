@@ -46,7 +46,7 @@ const About = () => {
                     alt="Your alt text"
                     className="absolute z-[0] overflow-hidden max-w-[45%] right-[10%] phone:hidden phoneTab:hidden"
                 />
-                <div className='relative flex xl:flex-row flex-col items-center xl:px-[120px] xl:gap-x-[63px]' >
+                <div className='relative flex xl:flex-row flex-col items-center xl:px-[120px] xl:gap-x-[63px] xl:justify-center' >
                     <div className='md:h-[600px] md:w-[600px] h-[200px] w-[200px] rounded-full bg-[#CC263012] relative' >
                         <Image
                             src="./../Frame 120.svg"

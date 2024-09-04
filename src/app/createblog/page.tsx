@@ -137,7 +137,7 @@ const Home = () => {
                     <div className='w-full py-4' >
                         {errors.body && <div className="text-red-500 text-[12px] my-2">{errors.body}</div>}
                         <Editor
-                            apiKey = {"5afe0oaakdp41dym1nmykw530s45gg4oknpifmzzt0r7tdte"}
+                            apiKey = {"h8vbp6f7nutr08hhfm39ugf9neecd2i6m59yydtowtor4gec"}
                             value={values.body}
                             onEditorChange={(stringifiedHtmlValue) => {
                                 setFieldValue("body", stringifiedHtmlValue);
