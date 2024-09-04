@@ -4,7 +4,6 @@ import Link from "next/link";
 import dayjs from 'dayjs';
 
 const BlogCard = ({data}:{data: any}) => {
-    console.log(data);
   return (
     <div className='flex' >
         <Link href={`/blog/${data?.id}`} >
