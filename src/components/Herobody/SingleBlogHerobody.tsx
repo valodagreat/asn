@@ -3,7 +3,7 @@ import React from 'react'
 
 const SingleBlogHerobody = ({articleData}: {articleData: any}) => {
     const calculateReadingTime = (text: any) => {
-        const wordsPerMinute = 200; // Adjust this value as needed
+        const wordsPerMinute = 250; // Adjust this value as needed
         const words = text?.split(/\s+/).length;
         const readingTimeInMinutes = Math.ceil(words / wordsPerMinute);
         
