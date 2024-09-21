@@ -5,10 +5,13 @@ import SingleBlogHero from '../../../components/Hero/SingleBlogHero'
 import BlogContent from '../../../components/BlogContent/BlogContent'
 import { DocumentData, collection, doc, getDoc, getFirestore } from 'firebase/firestore'
 import firebase_app from '../../../firebase/config'
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { PageButtonLoader } from '../../../components/Button/buttonload'
 
 const Page = ({ params }: { params: { id: string } }) => {
     const [loading, setLoading] = useState<boolean>(false);
+    const [edit, setEdit] = useState<boolean>(false);
+    const auth = getAuth(firebase_app);
     const [articleData, setArticleData] = useState<DocumentData | null>(null);
     useEffect(() => {
         setLoading(true)
@@ -33,6 +36,18 @@ const Page = ({ params }: { params: { id: string } }) => {
         };
         getDocument();
     }, [params.id])
+
+    useEffect(()=> {
+      const unsubscribe = onAuthStateChanged(auth, async (user) => {
+        if(user?.email) {
+            setEdit(true);
+            // console.log(user)
+        }else{
+          setEdit(false);
+        }
+      });
+      return () => unsubscribe();
+    }, [])
     
   return (
     <main className="min-h-screen w-full">
@@ -42,7 +57,7 @@ const Page = ({ params }: { params: { id: string } }) => {
                 </div>
             </div> : 
             <>
-                <SingleBlogHero articleData={articleData} />
+                <SingleBlogHero id={params?.id} edit={edit} articleData={articleData} />
                 <BlogContent articleData={articleData} />
                 <Footer />
             </>}

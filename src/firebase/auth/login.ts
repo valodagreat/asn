@@ -63,6 +63,38 @@ export async function createArticle(body:any) {
     return { result, error };
 }
 
+export async function updateArticle(body:any) {
+    let result = null,
+        error = null;
+    try {
+        const articleCollection = doc(firestore, 'Article', body?.articleId);
+        let imageUrl = body.image
+        if(typeof imageUrl === 'string') {
+
+        }else {
+            const documentUrls = await Promise.all([
+                uploadDocument(body.image!, body.id),
+            ]);
+            imageUrl = documentUrls[0]
+        }
+        result = await updateDoc(articleCollection, {
+            ...body,
+            image: imageUrl
+        })
+        result = body?.articleId
+        error= null
+    } catch (e) {
+        const firebaseError = e as AuthError;
+        const { code, message } = firebaseError;
+        const normalError = new Error(message || 'Unknown error');
+        normalError.name = code || 'UnknownError';
+        error = getFriendlyErrorMessage(firebaseError)
+        console.log(normalError?.message);
+    }
+
+    return { result, error };
+}
+
 function getFriendlyErrorMessage(error: AuthError): string {
     switch (error.code) {
         case 'auth/email-already-in-use':

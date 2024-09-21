@@ -95,7 +95,7 @@ const Home = () => {
                     <PageButtonLoader />
                 </div>
             </div> : <div className='h-full flex justify-center items-center w-full overflow-y-auto' >
-                <div className='w-full max-w-[850px] md:px-10 px-5 overflow-y-auto h-full py-10' >
+                <div className='w-full max-w-[850px] md:px-10 px-5 h-full py-10' >
                     <p className='font-medium xl:text-[32px] text-[24px]' >Create Article</p>
                     <div className='w-full py-4' >
                         <p>Author</p>
@@ -171,7 +171,8 @@ const Home = () => {
                     </div>
                     <button type='submit' onClick={()=>handleSubmit()} disabled={loading} className='md:text-[20px] w-[250px] rounded-[1000px] bg-[#CC2630] h-[56px] text-white flex items-center justify-center my-4' >
                     {loading ? <SecondButtonLoader /> : "Create Article"}
-                </button>
+                    </button>
+                    <div className='h-20' ></div>
                 </div>
             </div>}
         </div>
