@@ -18,32 +18,33 @@ const About = () => {
   const valuePropositions = [{ text: "We offer access to cutting edge career exposition and transition opportunities. These includes Career Exposition, Career Transition, Mentorship, Learning Platform.", header: "Career Development", imageDir: "./../Frame 60.svg" }, { text: "We offer access to platform and network that help budding startups grow and build. These includes; Entrepreneurial Mindset , Startup Network, Funding, Incubators x Hackathons.", header: "Entrepreneurship", imageDir: "./../Frame 60 (1).svg" }, { text: "We offer you the opportunity to enhance and harness the power of true leadership. These include; Leadership, Leadership Expo, Mentorship, Training, Social Impact.", header: "Leadership", imageDir: "./../Frame 60 (2).svg" }]
 
  //made the our reach dynamic
- const [startCount, setStartCount] = useState(false);
- const reachRef = useRef(null);
+    const [startCount, setStartCount] = useState(false);
+    const reachRef = useRef(null);
 
- useEffect(() => {
-     const observer = new IntersectionObserver(
-         (entries) => {
-             entries.forEach(entry => {
-                 if (entry.isIntersecting) {
-                     setStartCount(true);
-                     observer.unobserve(entry.target); 
-                 }
-             });
-         },
-         { threshold: 0.3 } 
-     );
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setStartCount(true);
+                    } else {
+                        setStartCount(false); 
+                    }
+                });
+            },
+            { threshold: 0.3 } 
+        );
 
-     if (reachRef.current) {
-         observer.observe(reachRef.current);
-     }
+        if (reachRef.current) {
+            observer.observe(reachRef.current);
+        }
 
-     return () => {
-         if (reachRef.current) {
-             observer.unobserve(reachRef.current);
-         }
-     };
- }, []);
+        return () => {
+            if (reachRef.current) {
+                observer.unobserve(reachRef.current);
+            }
+        };
+    }, []);
 
 
   return (
@@ -388,7 +389,7 @@ const About = () => {
                         />
                     </div>
                     <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
-                        {startCount ? <CountUp start={0} end={10} duration={3.0} suffix="+" /> : '10+'}
+                        {startCount ? <CountUp start={0} end={10} duration={2.7} suffix="+" /> : '10+'}
                         </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' > African countries</p>
                 </div> 
@@ -404,7 +405,7 @@ const About = () => {
                         />
                     </div>
                     <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
-                        {startCount ? <CountUp start={0} end={8} duration={3.0} suffix="+" /> : '8+'}
+                        {startCount ? <CountUp start={0} end={8} duration={2.7} suffix="+" /> : '8+'}
                         </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Global Speakers</p>
                 </div>
@@ -420,7 +421,7 @@ const About = () => {
                         />
                     </div>
                     <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
-                    {startCount ? <CountUp start={0} end={20} duration={3.0} suffix="+" /> : '20+'}
+                    {startCount ? <CountUp start={0} end={20} duration={2.7} suffix="+" /> : '20+'}
                         </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Universities </p>
                 </div>
