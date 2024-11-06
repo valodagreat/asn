@@ -1,15 +1,50 @@
+"use client"
+
 import Image from 'next/image'
 import React from 'react'
 import { manual } from '../../styles/font'
 import Footer from '../Footer/Footer'
+import { useEffect, useRef, useState } from 'react';
+import CountUp from 'react-countup';
+
 // import GetInvolved from '../GetInvolved/GetInvolved'
 // import Impact from '../Impact/Impact'
 import BlogSectionHome from '../BlogSectionHome/BlogSectionHome'
 import YouTubeSectionHome from '../YouTubeSectionHome/YouTubeSectionHome'
 import Button from '../Button/Button'
 
+
 const About = () => {
   const valuePropositions = [{ text: "We offer access to cutting edge career exposition and transition opportunities. These includes Career Exposition, Career Transition, Mentorship, Learning Platform.", header: "Career Development", imageDir: "./../Frame 60.svg" }, { text: "We offer access to platform and network that help budding startups grow and build. These includes; Entrepreneurial Mindset , Startup Network, Funding, Incubators x Hackathons.", header: "Entrepreneurship", imageDir: "./../Frame 60 (1).svg" }, { text: "We offer you the opportunity to enhance and harness the power of true leadership. These include; Leadership, Leadership Expo, Mentorship, Training, Social Impact.", header: "Leadership", imageDir: "./../Frame 60 (2).svg" }]
+
+ //made the our reach dynamic
+ const [startCount, setStartCount] = useState(false);
+ const reachRef = useRef(null);
+
+ useEffect(() => {
+     const observer = new IntersectionObserver(
+         (entries) => {
+             entries.forEach(entry => {
+                 if (entry.isIntersecting) {
+                     setStartCount(true);
+                     observer.unobserve(entry.target); 
+                 }
+             });
+         },
+         { threshold: 0.3 } 
+     );
+
+     if (reachRef.current) {
+         observer.observe(reachRef.current);
+     }
+
+     return () => {
+         if (reachRef.current) {
+             observer.unobserve(reachRef.current);
+         }
+     };
+ }, []);
+
 
   return (
     <div id="about" >
@@ -321,7 +356,8 @@ const About = () => {
                 </div>
             </div>
         </div>
-        <div className='our-reach relative xl:px-[120px] md:px-20 xl:py-[138px] md:py-24 py-9 px-7' >
+        
+        <div ref={reachRef} className='our-reach relative xl:px-[120px] md:px-20 xl:py-[138px] md:py-24 py-9 px-7' >
             <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`} >Our Reach so Far</h1>
             <div className='flex flex-wrap gap-x-[70px] md:gap-x-[120px] gap-y-9 py-6' >
                 <div className='flex flex-col items-center gap-y-1' >
@@ -335,7 +371,9 @@ const About = () => {
                             className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
                         />
                     </div>
-                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >1500+</p>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
+                    {startCount ? <CountUp start={0} end={1500} duration={2.5} suffix="+" /> : '1500+'}
+                    </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Students reached</p>
                 </div>
                 <div className='flex flex-col items-center gap-y-1' >
@@ -349,9 +387,11 @@ const About = () => {
                             className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
                         />
                     </div>
-                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >10+</p>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
+                        {startCount ? <CountUp start={0} end={10} duration={3.0} suffix="+" /> : '10+'}
+                        </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' > African countries</p>
-                </div>
+                </div> 
                 <div className='flex flex-col items-center gap-y-1' >
                     <div className='bg-[#CC263015] h-[108px] w-[108px] md:h-[128px] md:w-[128px] rounded-full flex items-center justify-center' >
                         <Image
@@ -363,7 +403,9 @@ const About = () => {
                             className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
                         />
                     </div>
-                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >8+</p>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
+                        {startCount ? <CountUp start={0} end={8} duration={3.0} suffix="+" /> : '8+'}
+                        </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Global Speakers</p>
                 </div>
                 <div className='flex flex-col items-center gap-y-1' >
@@ -377,7 +419,9 @@ const About = () => {
                             className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
                         />
                     </div>
-                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >20+</p>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
+                    {startCount ? <CountUp start={0} end={20} duration={3.0} suffix="+" /> : '20+'}
+                        </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Universities </p>
                 </div>
             </div>

@@ -28,7 +28,7 @@ const NavBar = () => {
                     }
                     )}
                 </ul>
-                <button onClick={handleClick} className='md:text-[20px] w-[177px] rounded-[1000px] bg-[#CC2630] h-[56px] text-white hidden xl:flex items-center justify-center' >
+                <button onClick= {handleClick} className='md:text-[20px] w-[177px] rounded-[1000px] bg-[#CC2630] h-[56px] text-white hidden xl:flex items-center justify-center' >
                     Donate
                 </button>
             </div>
