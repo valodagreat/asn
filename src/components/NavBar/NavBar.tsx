@@ -2,13 +2,17 @@
 import Image from 'next/image'
 import React, { useState } from 'react';
 import Link from "next/link";
+import DonateButton from '../Button/DonateButton'
 
 const NavBar = () => {
     const navTabs = [ "Home", "About", "Blog" ]
     const [ openNav, setOpenNav ] = useState(false)
-    const handleClick = () => {
-        window.open('https://chat.whatsapp.com/HYCmYQr45EB4QM080Rrr6t', '_blank');
-    };
+    
+   
+
+     const handleClick = () => {
+         window.open('https://chat.whatsapp.com/HYCmYQr45EB4QM080Rrr6t', '_blank');
+     };
   return (
     <>
         <nav className='flex justify-between items-center w-full' >
@@ -28,9 +32,10 @@ const NavBar = () => {
                     }
                     )}
                 </ul>
-                <button onClick= {handleClick} className='md:text-[20px] w-[177px] rounded-[1000px] bg-[#CC2630] h-[56px] text-white hidden xl:flex items-center justify-center' >
+                <DonateButton />
+                {/* <button onClick= {handleClick} className='md:text-[20px] w-[177px] rounded-[1000px] bg-[#CC2630] h-[56px] text-white hidden xl:flex items-center justify-center' >
                     Donate
-                </button>
+                </button> */}
             </div>
             <div className='xl:hidden block' >
                 <Image onClick={()=> setOpenNav(true)} src={`./../quill_hamburger.svg`} alt="Bgimage" width={24} height={24} priority className='' />

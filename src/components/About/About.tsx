@@ -11,6 +11,9 @@ import CountUp from 'react-countup';
 // import Impact from '../Impact/Impact'
 import BlogSectionHome from '../BlogSectionHome/BlogSectionHome'
 import YouTubeSectionHome from '../YouTubeSectionHome/YouTubeSectionHome'
+import Donation from '../Donation/Donation';
+
+
 import Button from '../Button/Button'
 
 
@@ -65,6 +68,7 @@ const About = () => {
                 <p className='text-[#161616] xl:text-[28px] xl:leading-[64px] md:text-[24px] text-[12px] md:leading-[43.691px] font-normal leading-[28px]' >We are equipping African students for global relevance central to <span className='font-bold' >career development</span>, <span className='font-bold' >entrepreneurship</span> and <span className='font-bold' >leadership</span> by building a viable network of change makers across diverse universities in Africa.</p>
             </div>
         </div>
+
         <div className='bg-[#FFFFFF] xl:pt-[150px] md:pt-[60px] pt-9 md:pb-[120px] pb-[60px]' >
             <h1 className={`text-[#CC2630] font-medium xl:text-[56px] md:text-[42px] text-[16px] ${manual.className} md:px-[80px] px-7 xl:px-[120px] md:pb-[48px] xl:pb-10 pb-6`} >Our Value Proposition</h1>
             <div className='relative w-full' >
@@ -428,9 +432,12 @@ const About = () => {
             </div>
         </div>
         {/* <Impact /> */}
+        <Donation />
         <BlogSectionHome />
         <YouTubeSectionHome />
+        
         {/* <GetInvolved /> */}
+        
         <Footer />
     </div>
   )
