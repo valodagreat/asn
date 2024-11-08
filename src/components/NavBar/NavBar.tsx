@@ -8,9 +8,9 @@ const NavBar = () => {
     const navTabs = [ "Home", "About", "Blog" ]
     const [ openNav, setOpenNav ] = useState(false)
     
-    const handleClick = () => {
-        window.open('https://chat.whatsapp.com/HYCmYQr45EB4QM080Rrr6t', '_blank');
-    };
+    // const handleClick = () => {
+    //     window.open('https://chat.whatsapp.com/HYCmYQr45EB4QM080Rrr6t', '_blank');
+    // };
 
     return (
         <nav className='relative'>
@@ -58,7 +58,7 @@ const NavBar = () => {
                 </div>
             </div>
 
-            {/* Refined Mobile Menu */}
+            
             <div 
                 className={`xl:hidden fixed right-4 top-20 w-48 bg-white shadow-md rounded-xl transform transition-all duration-300 ease-in-out z-[55] ${
                     openNav ? 'opacity-90 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'

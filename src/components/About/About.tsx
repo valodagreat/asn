@@ -71,7 +71,7 @@ const About = () => {
             
         </div>
         <div id="mission">
-    <div className="relative flex bg-white phone:min-h-[250px]"> {/* Changed background to plain white */}
+    <div className="relative flex bg-white phone:min-h-[250px]"> 
         <div className="w-full h-full relative z-10 xl:px-[120px] md:px-20 xl:py-[138px] md:py-24 py-9 px-7">
             <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`}>
                 Our Mission
