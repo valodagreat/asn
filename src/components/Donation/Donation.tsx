@@ -10,7 +10,7 @@ const Donation = () => {
   };
 
   return (
-    <div id="donation" className="donation-container p-6 bg-white rounded-lg shadow-xs">
+    <div id="donation" className="donation-container p-6 bg-white rounded-lg ">
       <h1 className={`text-[#CC2630] text-center font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} pb-4 md:pb-6 xl:pb-8`}>
         Support Our Cause
       </h1>
@@ -20,7 +20,7 @@ const Donation = () => {
       <div className="flex justify-center pb-4 md:pb-6 xl:pb-8">
         <button 
           onClick={handleDonate} 
-          className="w-full md:w-auto px-8 py-3 bg-[#CC2630] text-white rounded-full text-lg font-medium hover:bg-[#a92028] transition"
+          className="px-8 py-3  bg-[#CC2630] text-white rounded-full text-lg font-medium hover:bg-[#a92028] transition"
         >
           Donate Now
         </button>
