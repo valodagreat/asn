@@ -67,7 +67,34 @@ const About = () => {
                 <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`} >Who we are</h1>
                 <p className='text-[#161616] xl:text-[28px] xl:leading-[64px] md:text-[24px] text-[12px] md:leading-[43.691px] font-normal leading-[28px]' >We are equipping African students for global relevance central to <span className='font-bold' >career development</span>, <span className='font-bold' >entrepreneurship</span> and <span className='font-bold' >leadership</span> by building a viable network of change makers across diverse universities in Africa.</p>
             </div>
+
+            
         </div>
+        <div id="mission">
+    <div className="relative flex bg-white phone:min-h-[250px]"> {/* Changed background to plain white */}
+        <div className="w-full h-full relative z-10 xl:px-[120px] md:px-20 xl:py-[138px] md:py-24 py-9 px-7">
+            <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`}>
+                Our Mission
+            </h1>
+            <p className="text-[#161616] xl:text-[28px] xl:leading-[64px] md:text-[24px] text-[12px] md:leading-[43.691px] font-normal leading-[28px]">
+                Our mission is to <span className="font-bold">empower</span> African students with the skills, knowledge, and network they need to thrive in the global marketplace. Through <span className="font-bold">mentorship</span>, <span className="font-bold">resources</span>, and <span className="font-bold">opportunities</span>, we're building the next generation of African leaders and innovators.
+            </p>
+
+            <h1 className={`mt-10 text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`}>
+                Our Vision
+            </h1>
+            <p className="text-[#161616] xl:text-[28px] xl:leading-[64px] md:text-[24px] text-[12px] md:leading-[43.691px] font-normal leading-[28px]">
+                Our vision is to create a future where <span className="font-bold">every African student</span> has the opportunity to succeed globally, bringing innovation, leadership, and positive change to their communities and the world.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
 
         <div className='bg-[#FFFFFF] xl:pt-[150px] md:pt-[60px] pt-9 md:pb-[120px] pb-[60px]' >
             <h1 className={`text-[#CC2630] font-medium xl:text-[56px] md:text-[42px] text-[16px] ${manual.className} md:px-[80px] px-7 xl:px-[120px] md:pb-[48px] xl:pb-10 pb-6`} >Our Value Proposition</h1>
