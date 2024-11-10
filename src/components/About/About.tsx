@@ -1,15 +1,54 @@
+"use client"
+
 import Image from 'next/image'
 import React from 'react'
 import { manual } from '../../styles/font'
 import Footer from '../Footer/Footer'
+import { useEffect, useRef, useState } from 'react';
+import CountUp from 'react-countup';
+
 // import GetInvolved from '../GetInvolved/GetInvolved'
 // import Impact from '../Impact/Impact'
 import BlogSectionHome from '../BlogSectionHome/BlogSectionHome'
 import YouTubeSectionHome from '../YouTubeSectionHome/YouTubeSectionHome'
+import Donation from '../Donation/Donation';
+
+
 import Button from '../Button/Button'
+
 
 const About = () => {
   const valuePropositions = [{ text: "We offer access to cutting edge career exposition and transition opportunities. These includes Career Exposition, Career Transition, Mentorship, Learning Platform.", header: "Career Development", imageDir: "./../Frame 60.svg" }, { text: "We offer access to platform and network that help budding startups grow and build. These includes; Entrepreneurial Mindset , Startup Network, Funding, Incubators x Hackathons.", header: "Entrepreneurship", imageDir: "./../Frame 60 (1).svg" }, { text: "We offer you the opportunity to enhance and harness the power of true leadership. These include; Leadership, Leadership Expo, Mentorship, Training, Social Impact.", header: "Leadership", imageDir: "./../Frame 60 (2).svg" }]
+
+ //made the our reach dynamic
+    const [startCount, setStartCount] = useState(false);
+    const reachRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setStartCount(true);
+                    } else {
+                        setStartCount(false); 
+                    }
+                });
+            },
+            { threshold: 0.3 } 
+        );
+
+        if (reachRef.current) {
+            observer.observe(reachRef.current);
+        }
+
+        return () => {
+            if (reachRef.current) {
+                observer.unobserve(reachRef.current);
+            }
+        };
+    }, []);
+
 
   return (
     <div id="about" >
@@ -28,7 +67,35 @@ const About = () => {
                 <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`} >Who we are</h1>
                 <p className='text-[#161616] xl:text-[28px] xl:leading-[64px] md:text-[24px] text-[12px] md:leading-[43.691px] font-normal leading-[28px]' >We are equipping African students for global relevance central to <span className='font-bold' >career development</span>, <span className='font-bold' >entrepreneurship</span> and <span className='font-bold' >leadership</span> by building a viable network of change makers across diverse universities in Africa.</p>
             </div>
+
+            
         </div>
+        <div id="mission">
+    <div className="relative flex bg-white phone:min-h-[250px]"> 
+        <div className="w-full h-full relative z-10 xl:px-[120px] md:px-20 xl:py-[138px] md:py-24 py-9 px-7">
+            <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`}>
+                Our Mission
+            </h1>
+            <p className="text-[#161616] xl:text-[28px] xl:leading-[64px] md:text-[24px] text-[12px] md:leading-[43.691px] font-normal leading-[28px]">
+                Our mission is to <span className="font-bold">empower</span> African students with the skills, knowledge, and network they need to thrive in the global marketplace. Through <span className="font-bold">mentorship</span>, <span className="font-bold">resources</span>, and <span className="font-bold">opportunities</span>, we're building the next generation of African leaders and innovators.
+            </p>
+
+            <h1 className={`mt-10 text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`}>
+                Our Vision
+            </h1>
+            <p className="text-[#161616] xl:text-[28px] xl:leading-[64px] md:text-[24px] text-[12px] md:leading-[43.691px] font-normal leading-[28px]">
+                Our vision is to create a future where <span className="font-bold">every African student</span> has the opportunity to succeed globally, bringing innovation, leadership, and positive change to their communities and the world.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
         <div className='bg-[#FFFFFF] xl:pt-[150px] md:pt-[60px] pt-9 md:pb-[120px] pb-[60px]' >
             <h1 className={`text-[#CC2630] font-medium xl:text-[56px] md:text-[42px] text-[16px] ${manual.className} md:px-[80px] px-7 xl:px-[120px] md:pb-[48px] xl:pb-10 pb-6`} >Our Value Proposition</h1>
             <div className='relative w-full' >
@@ -321,7 +388,8 @@ const About = () => {
                 </div>
             </div>
         </div>
-        <div className='our-reach relative xl:px-[120px] md:px-20 xl:py-[138px] md:py-24 py-9 px-7' >
+        
+        <div ref={reachRef} className='our-reach relative xl:px-[120px] md:px-20 xl:py-[138px] md:py-24 py-9 px-7' >
             <h1 className={`text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`} >Our Reach so Far</h1>
             <div className='flex flex-wrap gap-x-[70px] md:gap-x-[120px] gap-y-9 py-6' >
                 <div className='flex flex-col items-center gap-y-1' >
@@ -335,7 +403,9 @@ const About = () => {
                             className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
                         />
                     </div>
-                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >1500+</p>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
+                    {startCount ? <CountUp start={0} end={1500} duration={2.5} suffix="+" /> : '1500+'}
+                    </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Students reached</p>
                 </div>
                 <div className='flex flex-col items-center gap-y-1' >
@@ -349,9 +419,11 @@ const About = () => {
                             className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
                         />
                     </div>
-                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >10+</p>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
+                        {startCount ? <CountUp start={0} end={10} duration={2.7} suffix="+" /> : '10+'}
+                        </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' > African countries</p>
-                </div>
+                </div> 
                 <div className='flex flex-col items-center gap-y-1' >
                     <div className='bg-[#CC263015] h-[108px] w-[108px] md:h-[128px] md:w-[128px] rounded-full flex items-center justify-center' >
                         <Image
@@ -363,7 +435,9 @@ const About = () => {
                             className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
                         />
                     </div>
-                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >8+</p>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
+                        {startCount ? <CountUp start={0} end={8} duration={2.7} suffix="+" /> : '8+'}
+                        </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Global Speakers</p>
                 </div>
                 <div className='flex flex-col items-center gap-y-1' >
@@ -377,15 +451,20 @@ const About = () => {
                             className='md:w-[80px] md:h-[80px] w-[60x] h-[60x]'
                         />
                     </div>
-                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >20+</p>
+                    <p className='text-center font-bold text-[20px] leading-[24px] md:text-[48px] md:leading-[57px]' >
+                    {startCount ? <CountUp start={0} end={20} duration={2.7} suffix="+" /> : '20+'}
+                        </p>
                     <p className='text-center text-[12px] leading-[24px] md:text-[24px] md:leading-[57px]' >Universities </p>
                 </div>
             </div>
         </div>
         {/* <Impact /> */}
+        <Donation />
         <BlogSectionHome />
         <YouTubeSectionHome />
+        
         {/* <GetInvolved /> */}
+        
         <Footer />
     </div>
   )
