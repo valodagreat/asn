@@ -47,7 +47,7 @@ const Page = ({ params }: { params: { id: string } }) => {
         }
       });
       return () => unsubscribe();
-    }, [])
+    }, [auth])
     
   return (
     <main className="min-h-screen w-full">

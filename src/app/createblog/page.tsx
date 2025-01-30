@@ -64,7 +64,7 @@ const Home = () => {
         });
 
         return () => unsubscribe();
-    }, []);
+    }, [auth, router]);
 
       // handle drag events
     const handleDrag = function(e: any) {

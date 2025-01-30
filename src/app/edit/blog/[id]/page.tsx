@@ -66,7 +66,7 @@ const Home = ({ params }: { params: { id: string } }) => {
         });
 
         return () => unsubscribe();
-    }, []);
+    }, [auth, router]);
 
     useEffect(() => {
         setLoadingData(true)
@@ -91,7 +91,7 @@ const Home = ({ params }: { params: { id: string } }) => {
             }
         };
         getDocument();
-    }, [params.id])
+    }, [params.id, setValues])
 
     const handleDrag = function(e: any) {
         e.preventDefault();

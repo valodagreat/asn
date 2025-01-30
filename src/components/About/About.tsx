@@ -42,9 +42,11 @@ const About = () => {
             observer.observe(reachRef.current);
         }
 
+        let myRef = reachRef?.current
+
         return () => {
-            if (reachRef.current) {
-                observer.unobserve(reachRef.current);
+            if (myRef) {
+                observer.unobserve(myRef);
             }
         };
     }, []);
@@ -77,7 +79,7 @@ const About = () => {
                 Our Mission
             </h1>
             <p className="text-[#161616] xl:text-[28px] xl:leading-[64px] md:text-[24px] text-[12px] md:leading-[43.691px] font-normal leading-[28px]">
-                Our mission is to <span className="font-bold">empower</span> African students with the skills, knowledge, and network they need to thrive in the global marketplace. Through <span className="font-bold">mentorship</span>, <span className="font-bold">resources</span>, and <span className="font-bold">opportunities</span>, we're building the next generation of African leaders and innovators.
+                Our mission is to <span className="font-bold">empower</span> African students with the skills, knowledge, and network they need to thrive in the global marketplace. Through <span className="font-bold">mentorship</span>, <span className="font-bold">resources</span>, and <span className="font-bold">opportunities</span>, we&apos;re building the next generation of African leaders and innovators.
             </p>
 
             <h1 className={`mt-10 text-[#CC2630] font-medium xl:leading-[57px] xl:text-[56px] md:text-[42px] md:leading-[42px] text-[16px] leading-[12.37px] ${manual.className} xl:pb-11 md:pb-7 pb-2`}>

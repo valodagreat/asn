@@ -32,7 +32,7 @@ export const AuthContextProvider = ({ children } : { children: ReactNode }) => {
         });
 
         return () => unsubscribe();
-    }, []);
+    }, [router]);
 
     return (
         <AuthContext.Provider value={{ user, setUser, }}>
